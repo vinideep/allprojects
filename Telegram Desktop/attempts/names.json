@@ -1,0 +1,22 @@
+[
+    {
+    "name": "Alen",
+    "position": "CEO"
+    },
+    {
+    "name": "John",
+    "position": "Director"
+    },
+    {
+        "name": "Mark",
+        "position": "Worker"
+    },
+    {
+        "name": "Hasan",
+        "position": "Worker"
+    },
+    {
+        "name": "Deen",
+        "position": "Worker"
+    }
+]

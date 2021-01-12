@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	</head> 
+	<body style="text-align: center;"> 
+	
+		<button onClick="create_form()"> 
+			click here to Create form
+		</button> 
+ 
+<script> 			
+	var br = document.createElement("br"); 
+
+	function create_form() { 
+				
+		// Create a form synamically 
+		var form = document.createElement("form"); 
+		form.setAttribute("method", "post"); 
+		form.setAttribute("action", "submit.php"); 
+
+		var FN = document.createElement("input"); 
+		FN.setAttribute("id", "full_name"); 
+		FN.setAttribute("type", "text"); 
+		FN.setAttribute("name", "FullName"); 
+		FN.setAttribute("placeholder", "Full Name"); 
+
+		var DOB = document.createElement("input"); 
+		DOB.setAttribute("type", "text"); 
+		DOB.setAttribute("id", "date_of_birth"); 
+		DOB.setAttribute("name", "dob"); 
+		DOB.setAttribute("placeholder", "DOB"); 
+
+		var EID = document.createElement("input"); 
+		EID.setAttribute("type", "text");
+		EID.setAttribute("id", "email_id");  
+		EID.setAttribute("name", "emailID"); 
+		EID.setAttribute("placeholder", "E-Mail ID"); 
+
+		var PWD = document.createElement("input"); 
+		PWD.setAttribute("type", "password"); 
+		PWD.setAttribute("id", "password");  
+		PWD.setAttribute("name", "password"); 
+		PWD.setAttribute("placeholder", "Password"); 
+
+		var RPWD = document.createElement("input"); 
+		RPWD.setAttribute("type", "password"); 
+		RPWD.setAttribute("id", "retype_password");  
+		RPWD.setAttribute("name", "reTypePassword"); 
+		RPWD.setAttribute("placeholder", "ReEnter Password"); 
+
+		var s = document.createElement("input"); 
+		s.setAttribute("type", "submit"); 
+		s.setAttribute("value", "Submit"); 
+				
+		form.appendChild(FN); 
+		form.appendChild(br.cloneNode()); 
+		form.appendChild(DOB); 
+		form.appendChild(br.cloneNode()); 
+		form.appendChild(EID); 
+		form.appendChild(br.cloneNode()); 
+		form.appendChild(PWD); 
+		form.appendChild(br.cloneNode()); 
+		form.appendChild(RPWD); 
+		form.appendChild(br.cloneNode()); 
+		form.appendChild(s); 
+
+		document.getElementsByTagName("body")[0].appendChild(form); 
+	} 
+</script> 
+	</body> 
+</html> 
+

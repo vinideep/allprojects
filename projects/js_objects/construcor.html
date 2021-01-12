@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+</head>
+<body>
+    <h1>Javascript object constructors</h1>
+    <h3 id="demo"></h3>
+
+
+    <script>
+        function students(name,age,school,group){
+            this.name = name;
+            this.age = age;
+            this.school = school;
+            this.group = group;
+        }
+
+    var student = new students("vinith",24,"nanjappa","arts");
+        let show = document.getElementById("demo")
+        show.innerHTML = student.name+" is studing in the "+student.school+ " School. He takes "+ student.group+ " group and his age is "+ student.age;
+    </script>
+</body>
+</html>

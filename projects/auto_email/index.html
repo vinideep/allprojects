@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automate Email</title>
+    <style>
+        #inpboxes,#extractBtn, h1{
+            text-align: center;
+        }
+        #inpboxes{
+            border: 2px solid black;
+            width: 300px;
+            margin-left: 42%;
+            padding: 20px;
+            background: rgb(214, 192, 192);
+        }
+        button{
+            padding: 10px;
+            width: 80px;
+            border: 2px solid darkmagenta;
+            border-radius: 20px;
+            background: darkmagenta;
+            color: white;
+            cursor: pointer;
+        }
+        .output{
+            top: 50%;
+            padding: 50px;
+            border: 2px solid black;
+            width: 300px;
+            position: absolute;
+            display: flex;
+            text-align: left;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Automate Email</h1>
+    <div id="inpboxes">
+        <label for="name">Applicant name:</label>
+        <input type="text" name="name" id="inp1"><br><br>
+        <label for="position">Job position:</label>
+        <input type="text" name="position" id="inp2"><br><br>
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="inp3"><br><br>
+        <label for="company">Company name:</label>
+        <input type="text" name="company" id="inp4"><br><br>
+        <label for="title">Your title:</label>
+        <input type="text" name="title" id="inp5"><br><br>
+        <small id="error"></small><br><br>
+    
+    <div id="extractBtn" onclick="return Validate()">
+        <button type="submit">Extract</button>
+    </div>
+    <div id="output" class="">
+        <p id="demo"></p>
+    </div>
+    </div>
+<script src="index.js"></script>
+</body>
+</html>

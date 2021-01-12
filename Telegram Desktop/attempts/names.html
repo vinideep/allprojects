@@ -1,0 +1,46 @@
+<html>
+  <script>
+    var output = document.getElementById("queried_data");
+    var btn = document.getElementById("get_data_btn");
+    var select = document.getElementById("role");
+
+  /* Event handler on the button */
+  btn.addEventListener("click", function() {
+    /* Cleaning the screen */
+    output.innerHTML="";
+    /* New XMLHttpRequest object */
+    var httpRequest = new XMLHttpRequest();
+    /* EventHandler for ajax request */
+    httpRequest.addEventListener("load", function(){
+      if (this.status < 400) {
+        /* Data obtained by ajax */
+        var myObj = JSON.parse(this.responseText);
+        /* Print only selected positions */
+        var SelectArray= myObj.filter(function (obj) {
+            return obj.position== selectPosition;    
+        });
+        for (let select in SelectArray) {
+            output.innerHTML += SelectArray[select].position + " " + SelectArray[select].name+ "<br>";
+        }
+      } else {
+        var errors= new Error("Request failed: " + httpRequest.statusText);
+        console.log("Server is OK but some transport error");
+      }
+    }, false);
+    /* Opening a connection and defining parameters */
+    httpRequest.open("GET", "names.json", true);
+    httpRequest.send();
+  }, false )
+</script>
+<body>
+<label for="role">Select Position</label>
+<select id="role">
+  <option value="ceo">CEO</option>
+  <option value="director">Director</option>
+  <option value="worker">Worker</option>
+</select>
+<br><br><br>
+<div id="get_data_btn" class="btn">Get data from server</div>
+<div id="queried_data"></div>
+</body>
+</html>

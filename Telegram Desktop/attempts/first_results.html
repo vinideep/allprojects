@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	</head> 
+ 
+<script> 
+	window.onload = function load() {
+        email = document.getElementById("email_data")
+        email.innerText = localStorage.getItem("txtValue");
+        pwd = document.getElementById("password_data")
+        pwd.innerText = localStorage.getItem("txtValue1");
+        mobile = document.getElementById("mobile_data")
+        mobile.innerText = localStorage.getItem("txtValue2");
+        telephone = document.getElementById("telephone_data")
+        telephone.innerText = localStorage.getItem("txtValue3");
+    }
+</script> 
+
+<body style="text-align: center;"> 
+<div style=" font-size: 30px;  color: rgb(32, 7, 63); text-align: center;">
+    The Email is equal to: <span id="email_data" > Email</span><br> 
+    The Password is equal to <span id="password_data" > Password</span><br>
+    The Mobile is equal to <span id="mobile_data" > Mobile</span><br>
+    The Telephone is equal to <span id="telephone_data" > Telephone</span><br>
+</div>
+</body>
+
+</html>

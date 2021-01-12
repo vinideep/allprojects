@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	</head> 
+ 
+<script> 	
+function getData()
+{
+    //gettting the values
+    var email = document.getElementById("email").value;
+    var password= document.getElementById("password").value; 
+    var telephone= document.getElementById("telephone").value; 
+    var mobile= document.getElementById("mobile").value; 
+    //saving the values in local storage
+    localStorage.setItem("txtValue", email);
+    localStorage.setItem("txtValue1", password);
+    localStorage.setItem("txtValue2", mobile);
+    localStorage.setItem("txtValue3", telephone);   
+}
+</script> 
+
+<body style="text-align: center;"> 
+<form action="first_results.html">
+    <legend>Sign Up Form</legend>
+    <label>Email:<br />
+    <input type="text" name="email" id="email"/></label><br />
+    <label>Password<br />
+    <input type="text" name="password" id="password"/></label><br>
+    <label>Mobile:<br />
+    <input type="text" name="mobile" id="mobile"/></label><br />
+    <label>Telephone:<br />
+    <input type="text" name="telephone" id="telephone"/></label><br> 
+    <input type="submit" value="Submit" onclick="getData()">
+</form>
+</body> 
+
+</html> 
