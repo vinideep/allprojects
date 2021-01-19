@@ -69,9 +69,8 @@ for (let i = 0; i<hel.length;i++){
 }
 temp+=tamp;
 total.innerHTML = tamp;
-var billCount = document.getElementsByClassName("countNo");
-for (let i = 0;i<=billCount.length; i++){
-    bal[i] = bal[i] - parseInt(billCount[i].innerText);
+for (let i = 0;i<countno.length; i++){
+    bal[i] = bal[i] - parseInt(countno[i].innerText);
 }
 });
 // clearing function
@@ -181,6 +180,9 @@ for (let i = 0; i<hel.length;i++){
     document.getElementById("profit").innerText = parseInt(document.getElementById("ts").innerText)-parseInt(document.getElementById("tp").innerText);
     if(parseInt(document.getElementById("profit").innerText)<0){
         document.getElementById("loss").innerHTML = "Loss";
+    }
+    if(parseInt(document.getElementById("profit").innerText)>0){
+        document.getElementById("loss").innerHTML = "Profit";
     }
 }
 
